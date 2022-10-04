@@ -1,7 +1,5 @@
 package racingcar.cars;
 
-import java.util.Objects;
-
 public class Car {
 
     private static final int MAX_OF_NAME_LENGTH = 5;
@@ -23,8 +21,8 @@ public class Car {
         return this.location;
     }
 
-    public int setLocation(int forwardOrBackward) {
-        return this.location + forwardOrBackward;
+    public void setLocation(int forwardOrStop) {
+        this.location += forwardOrStop;
     }
 
     private void checkValidation(String name) throws Exception {
