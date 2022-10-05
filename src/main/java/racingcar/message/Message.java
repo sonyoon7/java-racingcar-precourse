@@ -7,7 +7,7 @@ public enum Message {
     INPUT_ERROR("[ERROR] 잘못된 입력값 입니다. 다시 입력해 주세요."),
     INPUT_GAME_COUNT("시도할 회수는 몇회인가요?"),
     RESULT("실행 결과"),
-    COMPLETE_FIRST_SENTENCE("최종 우승자: ");
+    COMPLETE_FIRST_SENTENCE("최종 우승자 : ");
 
     private final String message;
 
