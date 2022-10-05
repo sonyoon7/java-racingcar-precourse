@@ -1,5 +1,7 @@
 package racingcar.cars;
 
+import racingcar.rules.Rule;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,5 +26,12 @@ public class Cars {
 
     public List<Car> getCars() {
         return this.cars;
+    }
+
+    public  Cars race() {
+        for (Car car : this.cars) {
+            car.setLocation(Rule.isMovingForward());
+        }
+        return (Cars) this.cars;
     }
 }
