@@ -3,6 +3,7 @@ package racingcar.cars;
 public class Car {
 
     private static final int MAX_OF_NAME_LENGTH = 5;
+    private static final int MOVE = 1;
 
     private final String name;
 
@@ -21,8 +22,8 @@ public class Car {
         return this.location;
     }
 
-    public void setLocation(int forwardOrStop) {
-        this.location += forwardOrStop;
+    public void setLocation(boolean isForward) {
+        if (isForward) this.location += MOVE;
     }
 
     private void checkValidation(String name) throws Exception {

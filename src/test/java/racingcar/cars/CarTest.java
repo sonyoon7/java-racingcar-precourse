@@ -35,14 +35,14 @@ public class CarTest {
     @Test
     @DisplayName("자동차 위치")
     public void 자동차_위치_세팅() throws Exception {
-        pobiCar.setLocation(1);
+        pobiCar.setLocation(true);
         assertThat(pobiCar.getLocation()).isEqualTo(1);
-        pobiCar.setLocation(1);
+        pobiCar.setLocation(true);
         assertThat(pobiCar.getLocation()).isEqualTo(2);
-        pobiCar.setLocation(-1);
-        assertThat(pobiCar.getLocation()).isEqualTo(1);
-        pobiCar.setLocation(0);
-        assertThat(pobiCar.getLocation()).isEqualTo(1);
+        pobiCar.setLocation(false);
+        assertThat(pobiCar.getLocation()).isEqualTo(2);
+        pobiCar.setLocation(true);
+        assertThat(pobiCar.getLocation()).isEqualTo(3);
     }
 
 }
