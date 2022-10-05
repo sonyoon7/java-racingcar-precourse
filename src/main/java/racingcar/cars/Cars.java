@@ -3,6 +3,7 @@ package racingcar.cars;
 import racingcar.rules.Rule;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Cars {
@@ -31,7 +32,25 @@ public class Cars {
     public  Cars race() {
         for (Car car : this.cars) {
             car.setLocation(Rule.isMovingForward());
+            car.printRaceResult();
         }
-        return (Cars) this.cars;
+        return new Cars(this.cars);
     }
+
+    public String filterWinner() {
+        ArrayList<String> winnerList = new ArrayList<>();
+        Collections.sort(this.cars, Collections.reverseOrder());
+        int max = cars.get(0).getLocation();
+
+        for (Car car : cars) {
+            winnerList = findCoWinner(max, car, winnerList);
+        }
+        return String.join(", ", winnerList);
+    }
+
+    private ArrayList<String> findCoWinner(int max, Car car, ArrayList<String> winnerList) {
+        if(max == car.getLocation()) winnerList.add(car.getName());
+        return winnerList;
+    }
+
 }
