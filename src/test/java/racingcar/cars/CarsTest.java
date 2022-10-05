@@ -29,4 +29,13 @@ public class CarsTest {
                 ()-> Assertions.assertThat(racingCarList.get(3).getName()).isEqualTo("honux")
         );
     }
+
+    @Test
+    void 자동차_우승자_프린트_위치기준 () {
+        cars.getCars().get(2).setLocation(true);
+        cars.getCars().get(2).setLocation(true);
+        cars.getCars().get(3).setLocation(true);
+        cars.getCars().get(3).setLocation(true);
+        Assertions.assertThat(cars.filterWinner()).isEqualTo("crong, honux");
+    }
 }
