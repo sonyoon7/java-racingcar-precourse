@@ -1,6 +1,6 @@
 package racingcar.cars;
 
-public class Car implements Comparable<Car>{
+public class Car implements Comparable<Car> {
 
     private static final int MAX_OF_NAME_LENGTH = 5;
     private static final int MOVE = 1;
@@ -27,7 +27,7 @@ public class Car implements Comparable<Car>{
     }
 
     public void printRaceResult() {
-        System.out.print(this.name+" : ");
+        System.out.print(this.name + " : ");
         for (int i = 0; i < this.location; i++) {
             System.out.print("-");
         }
@@ -36,7 +36,7 @@ public class Car implements Comparable<Car>{
 
     private void checkValidation(String name) throws IllegalArgumentException {
         if (name.length() > MAX_OF_NAME_LENGTH) {
-            throw new IllegalArgumentException("자동차 이름은 "+ MAX_OF_NAME_LENGTH + "자 이하만 가능하다.");
+            throw new IllegalArgumentException("자동차 이름은 " + MAX_OF_NAME_LENGTH + "자 이하만 가능하다.");
         }
     }
 

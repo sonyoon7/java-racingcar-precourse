@@ -8,8 +8,6 @@ import racingcar.cars.Cars;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertAll;
-
 public class RoundsTest {
 
     private Rounds rounds;
@@ -17,14 +15,14 @@ public class RoundsTest {
 
     @BeforeEach
     void beforeEach() throws IllegalArgumentException {
-        String input ="pobi,javaj,crong,honux";
+        String input = "pobi,javaj,crong,honux";
         cars = Cars.generateRacingCarsFromInputString(input);
         List<Round> roundList = new ArrayList<>();
-        Round round1 = new Round(cars.race(),1);
+        Round round1 = new Round(cars.race(), 1);
         System.out.println();
-        Round round2 = new Round(cars.race(),2);
+        Round round2 = new Round(cars.race(), 2);
         System.out.println();
-        Round round3 = new Round(cars.race(),3);
+        Round round3 = new Round(cars.race(), 3);
         System.out.println();
         roundList.add(round1);
         roundList.add(round2);

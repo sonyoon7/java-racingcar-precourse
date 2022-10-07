@@ -5,7 +5,7 @@ import racingcar.cars.Cars;
 public class Round {
 
     private final Cars cars;
-    private final int  currentRoundCount;
+    private final int currentRoundCount;
 
     public Round(Cars cars, int currentRoundCount) {
         this.cars = cars;

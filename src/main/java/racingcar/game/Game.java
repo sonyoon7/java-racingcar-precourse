@@ -1,4 +1,5 @@
 package racingcar.game;
+
 import camp.nextstep.edu.missionutils.Console;
 import racingcar.cars.Cars;
 import racingcar.message.Message;

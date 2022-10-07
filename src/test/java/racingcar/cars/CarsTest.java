@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertAll;
 public class CarsTest {
 
     private Cars cars;
-    String input ="pobi,javaj,crong,honux";
+    String input = "pobi,javaj,crong,honux";
 
     @BeforeEach
     void beforeEach() throws IllegalArgumentException {
@@ -20,18 +20,18 @@ public class CarsTest {
 
     @Test
     void 자동차_이름_입력() throws IllegalArgumentException {
-        List<Car> racingCarList =  cars.getCars();
+        List<Car> racingCarList = cars.getCars();
 
         assertAll(
-                ()-> Assertions.assertThat(racingCarList.get(0).getName()).isEqualTo("pobi"),
-                ()-> Assertions.assertThat(racingCarList.get(1).getName()).isEqualTo("javaj"),
-                ()-> Assertions.assertThat(racingCarList.get(2).getName()).isEqualTo("crong"),
-                ()-> Assertions.assertThat(racingCarList.get(3).getName()).isEqualTo("honux")
+                () -> Assertions.assertThat(racingCarList.get(0).getName()).isEqualTo("pobi"),
+                () -> Assertions.assertThat(racingCarList.get(1).getName()).isEqualTo("javaj"),
+                () -> Assertions.assertThat(racingCarList.get(2).getName()).isEqualTo("crong"),
+                () -> Assertions.assertThat(racingCarList.get(3).getName()).isEqualTo("honux")
         );
     }
 
     @Test
-    void 자동차_우승자_프린트_위치기준 () {
+    void 자동차_우승자_프린트_위치기준() {
         cars.getCars().get(2).setLocation(true);
         cars.getCars().get(2).setLocation(true);
         cars.getCars().get(3).setLocation(true);

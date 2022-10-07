@@ -24,6 +24,6 @@ public class Rounds {
     }
 
     public static Round getLastRound() {
-        return rounds.get(rounds.size()-1);
+        return rounds.get(rounds.size() - 1);
     }
 }

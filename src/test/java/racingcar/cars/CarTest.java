@@ -4,7 +4,8 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 import static org.junit.jupiter.api.Assertions.assertAll;
 
 public class CarTest {
@@ -12,7 +13,7 @@ public class CarTest {
     private static Car pobiCar;
 
     @BeforeAll
-    public static void 자동차_세팅 () throws IllegalArgumentException {
+    public static void 자동차_세팅() throws IllegalArgumentException {
         pobiCar = new Car("pobi");
     }
 

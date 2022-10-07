@@ -29,7 +29,7 @@ public class Cars {
         return this.cars;
     }
 
-    public  Cars race() {
+    public Cars race() {
         for (Car car : this.cars) {
             car.setLocation(Rule.isMovingForward());
             car.printRaceResult();
@@ -49,7 +49,7 @@ public class Cars {
     }
 
     private ArrayList<String> findCoWinner(int max, Car car, ArrayList<String> winnerList) {
-        if(max == car.getLocation()) winnerList.add(car.getName());
+        if (max == car.getLocation()) winnerList.add(car.getName());
         return winnerList;
     }
 
