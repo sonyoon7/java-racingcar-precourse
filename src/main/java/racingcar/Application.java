@@ -10,9 +10,8 @@ public class Application {
         try {
             Game.start();
 
-        } catch (Exception e) {
-            e.printStackTrace();
-//            System.out.println(Message.INPUT_ERROR.getMessage());
+        } catch (IllegalArgumentException e) {
+            System.out.println(Message.INPUT_ERROR.getMessage());
         }
     }
 }

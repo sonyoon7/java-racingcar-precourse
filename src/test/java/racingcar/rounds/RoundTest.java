@@ -14,7 +14,7 @@ public class RoundTest {
     String input ="pobi,javaj,crong,honux";
 
     @BeforeEach
-    void beforeEach() throws Exception {
+    void beforeEach() throws IllegalArgumentException {
         cars = Cars.generateRacingCarsFromInputString(input);
     }
 

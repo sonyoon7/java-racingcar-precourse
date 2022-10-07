@@ -14,12 +14,12 @@ public class CarsTest {
     String input ="pobi,javaj,crong,honux";
 
     @BeforeEach
-    void beforeEach() throws Exception {
+    void beforeEach() throws IllegalArgumentException {
         cars = Cars.generateRacingCarsFromInputString(input);
     }
 
     @Test
-    void 자동차_이름_입력() throws Exception {
+    void 자동차_이름_입력() throws IllegalArgumentException {
         List<Car> racingCarList =  cars.getCars();
 
         assertAll(

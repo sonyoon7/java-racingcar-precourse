@@ -16,7 +16,7 @@ public class Cars {
         this.cars = cars;
     }
 
-    public static Cars generateRacingCarsFromInputString(String input) throws Exception {
+    public static Cars generateRacingCarsFromInputString(String input) throws IllegalArgumentException {
         String[] nameArr = input.split(SEPARATOR);
         List<Car> cars = new ArrayList<>();
         for (String name : nameArr) {

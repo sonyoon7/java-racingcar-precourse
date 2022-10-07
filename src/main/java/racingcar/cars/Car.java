@@ -9,7 +9,7 @@ public class Car implements Comparable<Car>{
 
     private int location;
 
-    public Car(String name) throws Exception {
+    public Car(String name) throws IllegalArgumentException {
         checkValidation(name);
         this.name = name;
     }
@@ -34,9 +34,9 @@ public class Car implements Comparable<Car>{
         System.out.println();
     }
 
-    private void checkValidation(String name) throws Exception {
+    private void checkValidation(String name) throws IllegalArgumentException {
         if (name.length() > MAX_OF_NAME_LENGTH) {
-            throw new Exception("자동차 이름은 "+ MAX_OF_NAME_LENGTH + "자 이하만 가능하다.");
+            throw new IllegalArgumentException("자동차 이름은 "+ MAX_OF_NAME_LENGTH + "자 이하만 가능하다.");
         }
     }
 

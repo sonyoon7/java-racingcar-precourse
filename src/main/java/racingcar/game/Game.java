@@ -7,7 +7,7 @@ import racingcar.rounds.Rounds;
 
 public class Game {
 
-    public static void start() throws Exception {
+    public static void start() throws IllegalArgumentException {
 
         Cars cars = initCars();
         int roundCnt = inputRacingRounds();
@@ -16,7 +16,7 @@ public class Game {
         findWinner();
     }
 
-    private static Cars initCars() throws Exception {
+    private static Cars initCars() throws IllegalArgumentException {
         System.out.println(Message.INPUT.getMessage());
         String carNames = Console.readLine();
         return Cars.generateRacingCarsFromInputString(carNames);
